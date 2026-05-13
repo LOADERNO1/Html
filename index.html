@@ -12,11 +12,15 @@
         .header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #4b0082, #ff4500, #ffd700); border-bottom: 5px solid #ffcc00; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
         .container { width: 95%; max-width: 1000px; margin: 0 auto; padding: 10px; }
         
-        .section-box { background: #161b22; padding: 25px; border-radius: 25px; border: 1px solid #30363d; margin-bottom: 30px; overflow: hidden; }
+        .section-box { background: #161b22; padding: 25px; border-radius: 25px; border: 1px solid #30363d; margin-bottom: 30px; }
         .section-title { color: #ffcc00; font-size: 1.6rem; margin-bottom: 20px; border-left: 6px solid #ff4500; padding-left: 15px; }
         
-        .video-container { width: 100%; border-radius: 15px; overflow: hidden; border: 2px solid #30363d; background: #000; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .video-container { width: 100%; border-radius: 15px; overflow: hidden; border: 2px solid #30363d; background: #000; margin-bottom: 10px; }
         video { width: 100%; display: block; }
+
+        /* Share Button Style */
+        .share-btn { background: #30363d; color: #58a6ff; border: 1px solid #444; padding: 10px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; font-weight: bold; margin-bottom: 15px; transition: 0.3s; }
+        .share-btn:hover { background: #444; color: #fff; }
 
         .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
         .price-card { background: #0d1117; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #444; }
@@ -25,12 +29,12 @@
         .price-card.wall { border-top: 5px solid #ffd700; background: rgba(255, 215, 0, 0.05); }
         .price-val { font-size: 1.6rem; font-weight: 900; display: block; margin-top: 5px; color: #fff; }
         
-        .feature-tag { display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 5px 12px; border-radius: 8px; margin: 5px; font-size: 0.9rem; border: 1px solid #444; }
-        
-        .contact-btn { display: block; width: 100%; max-width: 350px; margin: 10px auto; padding: 14px; text-decoration: none; color: white !important; font-weight: bold; border-radius: 12px; text-align: center; font-size: 1rem; }
-        .wa-chat { background: #25d366; } .wa-channel { background: #008069; }
-        
-        .btn-download { display: block; text-align: center; background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white !important; padding: 20px; text-decoration: none; font-size: 1.4rem; font-weight: bold; border-radius: 20px; margin: 40px 0; box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3); }
+        .payment-methods { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 15px; }
+        .pay-badge { background: #21262d; padding: 8px 15px; border-radius: 10px; border: 1px solid #30363d; font-size: 0.9rem; font-weight: bold; color: #58a6ff; }
+
+        .contact-btn { display: block; width: 100%; max-width: 350px; margin: 10px auto; padding: 14px; text-decoration: none; color: white !important; font-weight: bold; border-radius: 12px; text-align: center; }
+        .wa-chat { background: #25d366; }
+        .btn-download { display: block; text-align: center; background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white !important; padding: 20px; text-decoration: none; font-size: 1.4rem; font-weight: bold; border-radius: 20px; margin: 40px 0; }
         .footer { background: #010409; padding: 40px 20px; text-align: center; border-radius: 40px 40px 0 0; border-top: 1px solid #30363d; }
     </style>
 </head>
@@ -38,34 +42,32 @@
 
     <header class="header">
         <h1>TIGER LOADER 4.4</h1>
-        <p>🎮 Premium Gaming Hub | Live Video Proofs</p>
+        <p>🎮 Premium Gaming Experience | Live Video Proofs</p>
     </header>
 
     <div class="container">
         
         <section class="section-box" style="border: 2px solid #ffd700;">
             <h2 class="section-title" style="border-left-color: #ffd700;">💎 Wall Hack Exclusive (Safe 100%)</h2>
-            
             <div class="video-container">
-                <video controls preload="metadata" poster="ss1.jpg">
+                <video id="video1" controls preload="metadata">
                     <source src="wallhack_demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             </div>
+            <button class="share-btn" onclick="shareContent('Wall Hack Video Proof', 'wallhack_demo.mp4')">
+                📤 Share Wall Hack Video
+            </button>
 
-            <div style="margin-bottom: 15px;">
-                <span class="feature-tag">Wall Hack Safe 💯</span>
-                <span class="feature-tag">No Ban Guaranteed</span>
-                <span class="feature-tag">High Quality Video</span>
+            <div style="text-align: center; margin-bottom: 15px; color: #ffd700; font-weight: bold;">
+                Wall Hack Safe 💯 | No Ban Guaranteed
             </div>
-
             <div class="price-grid">
                 <div class="price-card wall">
-                    <span style="color: #ffd700; font-weight: bold; font-size: 0.8rem;">FIX PRICE (PKR)</span>
+                    <span style="color: #ffd700; font-size: 0.8rem;">FIX PRICE (PKR)</span>
                     <span class="price-val">2500 PK</span>
                 </div>
                 <div class="price-card wall">
-                    <span style="color: #ffd700; font-weight: bold; font-size: 0.8rem;">FIX PRICE (USDT)</span>
+                    <span style="color: #ffd700; font-size: 0.8rem;">FIX PRICE (USDT)</span>
                     <span class="price-val">$15</span>
                 </div>
             </div>
@@ -73,34 +75,37 @@
 
         <section class="section-box">
             <h2 class="section-title">📂 Tiger Loader (ESP + Full Features)</h2>
-            
             <div class="video-container">
-                <video controls preload="metadata" poster="ss2.jpg">
+                <video id="video2" controls preload="metadata">
                     <source src="loader_demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             </div>
-
-            <div style="margin-bottom: 20px;">
-                <span class="feature-tag">ESP Location</span>
-                <span class="feature-tag">Bullet Track</span>
-                <span class="feature-tag">Visibility Check</span>
-                <span class="feature-tag">Online Update</span>
-            </div>
+            <button class="share-btn" onclick="shareContent('Full Loader Video Proof', 'loader_demo.mp4')">
+                📤 Share Loader Video
+            </button>
             
-            <h3 style="color: #00c853; margin-bottom: 10px; font-size: 1.1rem;">Pakistan Subscription 🇵🇰</h3>
+            <h3 style="color: #00c853; margin-bottom: 10px;">Pakistan Pricing 🇵🇰</h3>
             <div class="price-grid" style="margin-bottom: 25px;">
                 <div class="price-card pk"><span>1 Week</span><span class="price-val">1500</span></div>
                 <div class="price-card pk"><span>1 Month</span><span class="price-val">3500</span></div>
                 <div class="price-card pk"><span>Full Season</span><span class="price-val">6500</span></div>
             </div>
 
-            <h3 style="color: #aa00ff; margin-bottom: 10px; font-size: 1.1rem;">International Subscription 🌎</h3>
+            <h3 style="color: #aa00ff; margin-bottom: 10px;">International Pricing 🌎</h3>
             <div class="price-grid">
                 <div class="price-card usd"><span>1 Week</span><span class="price-val">10$</span></div>
-                <div class="price-card usd"><span>14 Days</span><span class="price-val">18$</span></div>
                 <div class="price-card usd"><span>1 Month</span><span class="price-val">25$</span></div>
                 <div class="price-card usd"><span>Full Season</span><span class="price-val">35$</span></div>
+            </div>
+        </section>
+
+        <section class="section-box">
+            <h2 class="section-title">💳 Available Payment Methods</h2>
+            <div class="payment-methods">
+                <div class="pay-badge">Binance (USDT)</div>
+                <div class="pay-badge">NayaPay</div>
+                <div class="pay-badge">ZarPay</div>
+                <div class="pay-badge">Local Bank Transfer</div>
             </div>
         </section>
 
@@ -110,10 +115,23 @@
 
         <footer class="footer">
             <a href="https://wa.me/923284891261" class="contact-btn wa-chat">Chat on WhatsApp</a>
-            <a href="https://whatsapp.com/channel/0029VbBVCE21noz4kLcffH0A" class="contact-btn wa-channel">Join WhatsApp Channel</a>
-            <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">© 2026 TIGER LOADER - Official Proof Page</p>
+            <a href="https://whatsapp.com/channel/0029VbBVCE21noz4kLcffH0A" class="contact-btn wa-channel" style="background: #008069; color: white; padding: 14px; border-radius: 12px; display: block; max-width: 350px; margin: 10px auto; text-decoration: none;">Join WhatsApp Channel</a>
         </footer>
     </div>
+
+    <script>
+        function shareContent(title, file) {
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'Check out TIGER LOADER ' + title + '!',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                alert("Share not supported on this browser. You can copy the link manually.");
+            }
+        }
+    </script>
 
 </body>
 </html>
