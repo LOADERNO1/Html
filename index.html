@@ -75,20 +75,23 @@
         .wa-channel { background: #008069; }
         .tg-channel { background: #229ed9; }
         
-        /* FIXED ANIMATION STYLE */
+        /* FIXED ANIMATION STYLE - WHITE BOX REMOVED */
         lottie-player { 
-            background: transparent !important; 
-            mix-blend-mode: screen; 
+            background: transparent !important;
+            /* Lighten mode helps blend the animation perfectly */
+            mix-blend-mode: lighten; 
         }
         .lottie-check { 
-            width: 25px; 
-            height: 25px; 
-            display: inline-block; 
-            vertical-align: middle; 
-            background: transparent;
+            width: 28px; 
+            height: 28px; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background: transparent !important;
+            margin-left: 8px;
         }
-        .lottie-box { width: 35px; height: 35px; margin-right: 10px; }
-        .lottie-top { width: 22px; height: 22px; margin-right: 5px; }
+        .lottie-box { width: 35px; height: 35px; margin-right: 10px; background: transparent !important; }
+        .lottie-top { width: 22px; height: 22px; margin-right: 5px; background: transparent !important; }
 
         .btn-download { display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white !important; padding: 20px; text-decoration: none; font-size: 1.4rem; font-weight: bold; border-radius: 20px; margin: 40px 0; gap: 10px; }
         .footer { background: #010409; padding: 40px 20px; text-align: center; border-radius: 40px 40px 0 0; border-top: 1px solid #30363d; }
