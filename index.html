@@ -3,381 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANDROID &  iPHONE PUBG HACKS - PUBG</title>
+    <title>TIGER LOADER | OFFICIAL</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; color: #ffffff; background-color: #0d1117; }
+        * { box-sizing: border-box; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, #1a2a6c 0%, #080a0f 100%); z-index: -1; }
+        
+        .header { 
+            text-align: center; 
+            padding: 80px 20px 60px 20px; 
+            background: linear-gradient(135deg, #4b0082, #ff4500, #ffd700); 
+            border-bottom: 5px solid #ffcc00; 
+            border-radius: 0 0 50px 50px; 
+            margin-bottom: 40px; 
+            position: relative;
         }
-        body {
-            background: #0d1117;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            padding: 20px 15px;
-            line-height: 1.6;
+        .top-contacts {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: linear-gradient(135deg, #161b22, #0d1117);
+        .top-link {
+            text-decoration: none;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 6px 12px;
             border-radius: 15px;
-            border: 2px solid #ffcc00;
-        }
-        .header h1 {
-            color: #ffcc00;
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-            text-shadow: 0 2px 10px rgba(255, 204, 0, 0.3);
-        }
-        .header p {
-            color: #8b949e;
-            font-size: 0.95rem;
-        }
-        .video-card {
-            background: #161b22;
-            border: 2px solid #ffcc00;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
-        }
-        .video-title {
-            color: #ffcc00;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-align: center;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
-        .thumbnail {
+
+        .container { width: 95%; max-width: 1000px; margin: 0 auto; padding: 10px; }
+        
+        .section-box { background: #161b22; padding: 25px; border-radius: 25px; border: 1px solid #30363d; margin-bottom: 30px; }
+        .section-title { color: #ffcc00; font-size: 1.6rem; margin-bottom: 20px; border-left: 6px solid #ff4500; padding-left: 15px; }
+        
+        .video-container { 
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden; 
+            border-radius: 15px; 
+            border: 2px solid #30363d; 
+            background: #000; 
+            margin-bottom: 10px; 
+        }
+        .video-container iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            border: 0; 
+        }
+
+        .safe-tag { background: #00c853; color: white; display: flex; align-items: center; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; border: 1px solid #fff; width: fit-content; }
+
+        .share-btn { background: #30363d; color: #58a6ff; border: 1px solid #444; padding: 10px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; font-weight: bold; margin-bottom: 15px; transition: 0.3s; border: none; }
+        
+        .status-list { list-style: none; padding: 0; margin: 0; }
+        .status-item { background: #0d1117; padding: 12px; border-radius: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; border: 1px solid #333; align-items: center; }
+        .feature-item { color: #00c853; font-weight: bold; margin: 10px 0; display: flex; align-items: center; }
+
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
+        .price-card { background: #0d1117; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #444; }
+        .price-card.pk { border-top: 5px solid #00c853; }
+        .price-card.usd { border-top: 5px solid #aa00ff; }
+        .price-card.wall { border-top: 5px solid #ffd700; background: rgba(255, 215, 0, 0.05); }
+        .price-card.iphone { border-top: 5px solid #00a8ff; background: rgba(0, 168, 255, 0.05); }
+        .price-val { font-size: 1.6rem; font-weight: 900; display: block; margin-top: 5px; color: #fff; }
+        
+        .payment-methods { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 15px; }
+        .pay-badge { background: #21262d; padding: 12px 20px; border-radius: 15px; border: 1px solid #30363d; font-size: 1rem; font-weight: bold; color: #58a6ff; }
+
+        .contact-btn { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 350px; margin: 10px auto; padding: 10px; text-decoration: none; color: white !important; font-weight: bold; border-radius: 12px; text-align: center; font-size: 1rem; }
+        .wa-chat { background: #25d366; }
+        .tg-chat { background: #0088cc; }
+        .wa-channel { background: #008069; }
+        .tg-channel { background: #229ed9; }
+        
+        lottie-player { background: transparent !important; mix-blend-mode: screen; }
+        .lottie-check { width: 25px; height: 25px; display: inline-block; vertical-align: middle; }
+        .lottie-box { width: 35px; height: 35px; margin-right: 10px; }
+        .lottie-top { width: 22px; height: 22px; margin-right: 5px; }
+
+        .btn-download { display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white !important; padding: 20px; text-decoration: none; font-size: 1.4rem; font-weight: bold; border-radius: 20px; margin: 40px 0; gap: 10px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .footer { background: #010409; padding: 40px 20px; text-align: center; border-radius: 40px 40px 0 0; border-top: 1px solid #30363d; }
+    
+        /* New video section styles - keeping all old animations */
+        .safe-badge-new {
+            background: #00d26a;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: block;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .thumbnail-new {
             width: 100%;
             border-radius: 12px;
-            margin-bottom: 15px;
+            margin: 15px 0;
             display: block;
-            border: 2px solid #30363d;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            border: 2px solid #ffcc00;
+            background: #000;
+            min-height: 180px;
         }
-        .thumbnail:hover {
-            transform: scale(1.02);
-        }
-        .watch-btn {
+        .watch-btn-new {
             display: block;
             background: linear-gradient(135deg, #ff0000, #cc0000);
             color: #fff;
             text-align: center;
-            padding: 16px 20px;
-            border-radius: 10px;
+            padding: 18px 20px;
+            border-radius: 12px;
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
+            font-weight: 800;
             box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
             border: 2px solid #ff4444;
-            margin-bottom: 15px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
         }
-        .watch-btn:hover {
+        .watch-btn-new:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
-            background: linear-gradient(135deg, #ff1a1a, #e60000);
         }
-        .share-btn {
-            display: block;
-            background: #21262d;
-            color: #58a6ff;
-            text-align: center;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1.5px solid #30363d;
-            margin-bottom: 15px;
-        }
-        .share-btn:hover {
-            background: #30363d;
-            border-color: #58a6ff;
-        }
-        .price-box {
+        .features-new {
             background: #0d1117;
             border: 1.5px solid #30363d;
-            border-radius: 10px;
-            padding: 12px;
-            margin-top: 12px;
-            text-align: center;
-        }
-        .price-label {
-            color: #8b949e;
-            font-size: 0.85rem;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .price-value {
-            color: #ffcc00;
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-        .section-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ffcc00, transparent);
-            margin: 30px 0;
-        }
-        .safe-badge {
-            background: #00d26a;
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .features {
-            background: #0d1117;
-            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 15px;
             margin: 15px 0;
         }
-        .features h3 {
+        .features-new h3 {
             color: #ffcc00;
             font-size: 1rem;
-            margin-bottom: 10px;
+            margin: 0 0 12px 0;
         }
-        .features ul {
+        .features-new ul {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
+            margin: 0;
         }
-        .features li {
+        .features-new li {
             color: #c9d1d9;
-            padding: 5px 0;
+            padding: 6px 0;
             font-size: 0.9rem;
         }
-        .features li:before {
+        .features-new li:before {
             content: "✓ ";
             color: #00d26a;
             font-weight: bold;
             margin-right: 8px;
         }
-        .contact-section {
-            background: #161b22;
-            border: 2px solid #ffcc00;
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 30px;
-            text-align: center;
-        }
-        .contact-section h2 {
-            color: #ffcc00;
-            margin-bottom: 15px;
-        }
-        .contact-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: #fff;
-            padding: 14px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            margin: 8px;
-            transition: all 0.3s ease;
-        }
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-        .telegram-btn {
-            background: linear-gradient(135deg, #0088cc, #006699);
-        }
-        .telegram-btn:hover {
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #8b949e;
-            font-size: 0.85rem;
-            margin-top: 30px;
-            border-top: 1px solid #30363d;
-        }
+    
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <div class="header">
-            <h1>🔥 ADERNO HACKS 🔥</h1>
-            <p>Premium PUBG Mobile Hacks | 100% Safe & Working</p>
+
+    <header class="header">
+        <div class="top-contacts">
+            <a href="https://t.me/tigerthe1" class="top-link">
+                <div class="lottie-top"><lottie-player src="telegram logo beat.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Telegram
+            </a>
+            <a href="https://wa.me/923284891261" class="top-link">
+                <div class="lottie-top"><lottie-player src="WHATSAPP BUTTON.json" background="transparent" speed="1" loop autoplay></lottie-player></div> WhatsApp
+            </a>
         </div>
-        
-        <!-- Wall Hack Video Section -->
-        <div class="video-card">
-            <div class="video-title">💎 Wall Hack Exclusive (Safe 100%)</div>
-            <div style="text-align:center;">
-                <span class="safe-badge">Main Account 100% Safe ⚠️</span>
+        <h1>TIGER LOADER OFFICIAL 4.4</h1>
+        <p>🎮 Official Premium Experience | Video Proofs</p>
+    </header>
+
+    <div class="container">
+        <section class="section-box" style="border: 2px solid #00c853;">
+            <h2 class="section-title" style="border-left-color: #00c853;">🛡️ Security Status & Features</h2>
+            <p style="color: #ffcc00; font-weight: bold; margin-bottom: 20px;">Hello Guys Paid User 4.4 Update</p>
+            <div class="status-list">
+                <div class="status-item"><span>#⃣ PUBG Global</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
+                <div class="status-item"><span>#⃣ PUBG Korea</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
+                <div class="status-item"><span>#⃣ PUBG Vietnam</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
+                <div class="status-item"><span>#⃣ PUBG Taiwan</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
             </div>
-            
-            <img src="WALL_HACK_THUMBNAIL.jpg" alt="Wall Hack Video" class="thumbnail">
-            
-            <a href="https://youtu.be/po6CgCI5bVw?si=aq3Bkk-KNI9pkz4O" target="_blank" class="watch-btn">
+            <div style="margin-top: 25px; border-top: 1px solid #333; padding-top: 15px;">
+                <h3 style="color: #ffd700; margin-bottom: 15px; display: flex; align-items: center;">👑 Features List :- <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></h3>
+                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Esp Location</span>
+                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Bullet Track</span>
+                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Visibility Check</span>
+                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Online Update System</span>
+            </div>
+        </section>
+
+        <section class="section-box" style="border: 2px solid #ffd700;">
+            <h2 class="section-title" style="border-left-color: #ffd700;">💎 Wall Hack Exclusive (Safe 100%)</h2>
+            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
+            <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
+            <img src="WALL_HACK_THUMBNAIL.jpg" alt="Wall Hack Video" class="thumbnail-new">
+            <a href="https://youtu.be/po6CgCI5bVw?si=aq3Bkk-KNI9pkz4O" target="_blank" class="watch-btn-new">
                 ▶️ CLICK HERE TO WATCH FULL VIDEO
             </a>
-            
-            <a href="https://youtu.be/po6CgCI5bVw?si=aq3Bkk-KNI9pkz4O" target="_blank" class="share-btn">
-                📤 Share Wall Hack Video
-            </a>
-            
-            <div class="features">
+            <div class="features-new">
                 <h3>Features:</h3>
                 <ul>
                     <li>Wall Hack + Color Body</li>
+                    <li>ESP + Aimbot</li>
                     <li>100% Safe for Main Account</li>
                     <li>No Root Required</li>
                     <li>Anti-Ban Protection</li>
+                    <li>Bullet Track</li>
                     <li>Easy Installation</li>
                 </ul>
             </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (PKR)</div>
-                <div class="price-value">Rs. 2500 PK</div>
+</div>
+            <div class="video-container">
+                
             </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (USDT)</div>
-                <div class="price-value">$15</div>
+            <button class="share-btn" onclick="shareContent('Wall Hack Video Proof')">📤 Share Wall Hack Video</button>
+            <div class="price-grid">
+                <div class="price-card wall"><span>FIX PRICE (PKR)</span><span class="price-val">Rs.2500 PK</span></div>
+                <div class="price-card wall"><span>FIX PRICE (USDT)</span><span class="price-val">$15</span></div>
             </div>
-        </div>
+        </section>
 
-        <div class="section-divider"></div>
-
-        <!-- Android ESP Video Section -->
-        <div class="video-card">
-            <div class="video-title">🤖 Android Tiger ESP</div>
-            <div style="text-align:center;">
-                <span class="safe-badge">Main Account 100% Safe ⚠️</span>
+        <section class="section-box">
+            <h2 class="section-title">📂 Tiger Loader Android (ESP)</h2>
+            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></div>
+            <div class="video-container">
+                
             </div>
-            
-            <img src="ANDROID_THUMBNAIL.jpg" alt="Android ESP Video" class="thumbnail">
-            
-            <a href="https://youtu.be/2OWPHqQCi1M?si=BLyP0W2uQg2FU_54" target="_blank" class="watch-btn">
+            <button class="share-btn" onclick="shareContent('Full Loader Video Proof')">📤 Share Loader Video</button>
+            <div class="price-grid" style="margin-bottom: 25px;">
+                <div class="price-card pk"><span>1 Week</span><span class="price-val">Rs.1500</span></div>
+                <div class="price-card pk"><span>1 Month</span><span class="price-val">Rs.3500</span></div>
+                <div class="price-card pk"><span>Full Season</span><span class="price-val">Rs.6500</span></div>
+            </div>
+            <div class="price-grid">
+                <div class="price-card usd"><span>1 Week</span><span class="price-val">10$</span></div>
+                <div class="price-card usd"><span>1 Month</span><span class="price-val">25$</span></div>
+                <div class="price-card usd"><span>Full Season</span><span class="price-val">35$</span></div>
+            </div>
+        </section>
+
+        <section class="section-box" style="border: 2px solid #00a8ff;">
+            <h2 class="section-title" style="border-left-color: #00a8ff;">🍎 iPhone iPad PUBG Hack</h2>
+            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
+            <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
+            <img src="IPHONE_THUMBNAIL.jpg" alt="iPhone Hack Video" class="thumbnail-new">
+            <a href="IPHONE_YOUTUBE_LINK" target="_blank" class="watch-btn-new">
                 ▶️ CLICK HERE TO WATCH FULL VIDEO
             </a>
-            
-            <a href="https://youtu.be/2OWPHqQCi1M?si=BLyP0W2uQg2FU_54" target="_blank" class="share-btn">
-                📤 Share Android ESP Video
-            </a>
-            
-            <div class="features">
-                <h3>Features:</h3>
-                <ul>
-                    <li>ESP + Aimbot</li>
-                    <li>Player Name + Distance</li>
-                    <li>Item ESP</li>
-                    <li>Bullet Track </li>
-                    <li>Vehicle ESP</li>
-                    <li>100% Undetected</li>
-                </ul>
-            </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (PKR)</div>
-                <div class="price-value">Rs. 3000 PK</div>
-            </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (USDT)</div>
-                <div class="price-value">$18</div>
-            </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- iPhone Video Section -->
-        <div class="video-card">
-            <div class="video-title">🍎 iPhone iPad PUBG Hack</div>
-            <div style="text-align:center;">
-                <span class="safe-badge">Main Account 100% Safe ⚠️</span>
-            </div>
-            
-            <img src="IPHONE_THUMBNAIL.jpg" alt="iPhone Hack Video" class="thumbnail">
-            
-            <a href="IPHONE_YOUTUBE_LINK" target="_blank" class="watch-btn">
-                ▶️ CLICK HERE TO WATCH FULL VIDEO
-            </a>
-            
-            <a href="IPHONE_YOUTUBE_LINK" target="_blank" class="share-btn">
-                📤 Share iPhone Hack Video
-            </a>
-            
-            <div class="features">
+            <div class="features-new">
                 <h3>Features:</h3>
                 <ul>
                     <li>No Jailbreak Required</li>
                     <li>Wall Hack + ESP</li>
+                    <li>Color Body</li>
+                    <li>Bullet Track</li>
                     <li>Auto Update Support</li>
                     <li>iOS 15-17 Supported</li>
-                    <li>100% Safe</li>
+                    <li>100% Safe for Main Account</li>
                 </ul>
             </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (PKR) - WEEK</div>
-                <div class="price-value">Rs. 3300</div>
+</div>
+            <div class="video-container">
+                
             </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (USDT) - WEEK</div>
-                <div class="price-value">$15</div>
+            <button class="share-btn" onclick="shareContent('iPhone Hack Video Proof')">📤 Share iPhone Hack Video</button>
+            <div class="price-grid">
+                <div class="price-card iphone"><span>1 WEEK</span><span class="price-val">Rs.3300</span></div>
+                <div class="price-card iphone"><span>1 MONTH</span><span class="price-val">Rs.6500</span></div>
             </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (PKR) - MONTH</div>
-                <div class="price-value">Rs. 6500</div>
-            </div>
-            
-            <div class="price-box">
-                <div class="price-label">FIX PRICE (USDT) - MONTH</div>
-                <div class="price-value">$35</div>
-            </div>
-        </div>
+        </section>
 
-        <div class="section-divider"></div>
+        <section class="section-box">
+            <h2 class="section-title">💳 Payment Methods</h2>
+            <div class="payment-methods">
+                <div class="pay-badge">Easypaisa</div>
+                <div class="pay-badge">Jazz Cash</div>
+                <div class="pay-badge">Binance</div>
+                <div class="pay-badge">Bank Transfer</div>
+            </div>
+        </section>
 
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2>📞 Contact for Purchase</h2>
-            <p style="color: #8b949e; margin-bottom: 15px;">24/7 Support Available</p>
-            
-            <a href="https://whatsapp.com/channel/0029VbBVCE21noz4kLcffH0A" target="_blank" class="contact-btn">
-                💬 WhatsApp
+        <a href="https://github.com/LOADERNO1/LOADER/releases/download/Loader/TIGER.LOADER_4.4.0.apk" class="btn-download">
+            DOWNLOAD NEW UPDATE 4.4 <div class="lottie-check" style="width: 35px; height: 35px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
+        </a>
+
+        <footer class="footer">
+            <a href="https://wa.me/923284891261" class="contact-btn wa-chat">
+                <div class="lottie-box"><lottie-player src="WHATSAPP BUTTON.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Buy Chat on WhatsApp
             </a>
-            
-            <a href="https://t.me/tigerloaderss" target="_blank" class="contact-btn telegram-btn">
-                📱 Telegram
+            <a href="https://t.me/tigerthe1" class="contact-btn tg-chat">
+                <div class="lottie-box"><lottie-player src="telegram logo beat.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Buy Chat on Telegram
             </a>
-        </div>
-
-        <div class="footer">
-            <p>© 2026 ANDROID & iPHONE PUBG HACKS. All Rights Reserved.</p>
-            <p style="margin-top: 8px; font-size: 0.75rem;">Premium Gaming Solutions</p>
-        </div>
-
+            <a href="https://whatsapp.com/channel/0029VbBVCE21noz4kLcffH0A" class="contact-btn wa-channel">
+                <div class="lottie-box"><lottie-player src="WHATSAPP BUTTON.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Join WhatsApp Channel
+            </a>
+            <a href="https://t.me/tigerloaderss" class="contact-btn tg-channel">
+                <div class="lottie-box"><lottie-player src="telegram logo beat.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Join Telegram Channel
+            </a>
+            <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">© 2026 TIGER LOADER - Official Page</p>
+        </footer>
     </div>
+
+    <div style="display:none;">
+        RESOURCES_TIGER_LOADER_V4.4_SECURE_PAYMENT_VERIFIED_GITHUB_STABILITY_PATCH
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        [... ADDITIONAL STABILITY DATA BLOCK START ...]
+        TIGER_LOADER_OFFICIAL_4.4_FINAL_RELEASE_STABILITY_PATCH_VERIFIED_SECURE_PAYMENTS_ALL_MODULES_ACTIVE
+        [... ADDITIONAL STABILITY DATA BLOCK END ...]
+    </div>
+
+    <script>
+        function shareContent(title) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'TIGER LOADER',
+                    text: 'Check out ' + title + '!',
+                    url: window.location.href
+                }).catch(console.error);
+            }
+        }
+    </script>
 </body>
 </html>
