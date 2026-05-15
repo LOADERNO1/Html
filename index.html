@@ -46,25 +46,6 @@
         
         .section-box { background: #161b22; padding: 25px; border-radius: 25px; border: 1px solid #30363d; margin-bottom: 30px; }
         .section-title { color: #ffcc00; font-size: 1.6rem; margin-bottom: 20px; border-left: 6px solid #ff4500; padding-left: 15px; }
-        
-        .video-container { 
-            position: relative; 
-            padding-bottom: 56.25%; 
-            height: 0; 
-            overflow: hidden; 
-            border-radius: 15px; 
-            border: 2px solid #30363d; 
-            background: #000; 
-            margin-bottom: 10px; 
-        }
-        .video-container iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            border: 0; 
-        }
 
         .safe-tag { background: #00c853; color: white; display: flex; align-items: center; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; border: 1px solid #fff; width: fit-content; }
 
@@ -72,7 +53,6 @@
         
         .status-list { list-style: none; padding: 0; margin: 0; }
         .status-item { background: #0d1117; padding: 12px; border-radius: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; border: 1px solid #333; align-items: center; }
-        .feature-item { color: #00c853; font-weight: bold; margin: 10px 0; display: flex; align-items: center; }
 
         .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
         .price-card { background: #0d1117; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #444; }
@@ -96,10 +76,16 @@
         .lottie-box { width: 35px; height: 35px; margin-right: 10px; }
         .lottie-top { width: 22px; height: 22px; margin-right: 5px; }
 
-        .btn-download { display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white !important; padding: 20px; text-decoration: none; font-size: 1.4rem; font-weight: bold; border-radius: 20px; margin: 40px 0; gap: 10px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .footer { background: #010409; padding: 40px 20px; text-align: center; border-radius: 40px 40px 0 0; border-top: 1px solid #30363d; }
+        .footer { background: #010409; padding: 40px 20px; text-align: center; border-radius: 40px 40px 0 0; border-top: 1px solid #30363d; margin-top: 40px; }
     
-        /* New video section styles - keeping all old animations */
+        /* Media Flex Layout for fixing overlapping issues */
+        .media-flex-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
         .safe-badge-new {
             background: #00d26a;
             color: #000;
@@ -107,18 +93,17 @@
             border-radius: 15px;
             font-weight: 700;
             font-size: 1rem;
-            display: block;
             text-align: center;
-            margin: 15px 0;
+            width: 100%;
         }
         .thumbnail-new {
             width: 100%;
             border-radius: 12px;
-            margin: 15px 0;
             display: block;
             border: 2px solid #ffcc00;
             background: #000;
-            min-height: 180px;
+            max-height: 220px;
+            object-fit: cover;
         }
         .watch-btn-new {
             display: block;
@@ -132,7 +117,6 @@
             font-weight: 800;
             box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
             border: 2px solid #ff4444;
-            margin: 15px 0;
             transition: all 0.3s ease;
         }
         .watch-btn-new:hover {
@@ -144,7 +128,6 @@
             border: 1.5px solid #30363d;
             border-radius: 10px;
             padding: 15px;
-            margin: 15px 0;
         }
         .features-new h3 {
             color: #ffcc00;
@@ -167,7 +150,6 @@
             font-weight: bold;
             margin-right: 8px;
         }
-    
     </style>
 </head>
 <body>
@@ -195,39 +177,32 @@
                 <div class="status-item"><span>#⃣ PUBG Vietnam</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
                 <div class="status-item"><span>#⃣ PUBG Taiwan</span><span style="display: flex; align-items: center;">⏩ Safe <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></span></div>
             </div>
-            <div style="margin-top: 25px; border-top: 1px solid #333; padding-top: 15px;">
-                <h3 style="color: #ffd700; margin-bottom: 15px; display: flex; align-items: center;">👑 Features List :- <div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></h3>
-                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Esp Location</span>
-                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Bullet Track</span>
-                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Visibility Check</span>
-                <span class="feature-item"><div class="lottie-check"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div> Online Update System</span>
-            </div>
         </section>
 
         <section class="section-box" style="border: 2px solid #ffd700;">
             <h2 class="section-title" style="border-left-color: #ffd700;">💎 Wall Hack Exclusive (Safe 100%)</h2>
-            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
-            <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
-            <img src="WALL_HACK_THUMBNAIL.jpg" alt="Wall Hack Video" class="thumbnail-new">
-            <a href="https://youtu.be/po6CgCI5bVw?si=aq3Bkk-KNI9pkz4O" target="_blank" class="watch-btn-new">
-                ▶️ CLICK HERE TO WATCH FULL VIDEO
-            </a>
-            <div class="features-new">
-                <h3>Features:</h3>
-                <ul>
-                    <li>Wall Hack + Color Body</li>
-                    <li>ESP + Aimbot</li>
-                    <li>100% Safe for Main Account</li>
-                    <li>No Root Required</li>
-                    <li>Anti-Ban Protection</li>
-                    <li>Bullet Track</li>
-                    <li>Easy Installation</li>
-                </ul>
+            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></div>
+            
+            <div class="media-flex-container">
+                <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
+                <img src="WALL_HACK_THUMBNAIL.jpg" alt="Wall Hack Video" class="thumbnail-new">
+                <a href="https://youtu.be/po6CgCI5bVw?si=aq3Bkk-KNI9pkz4O" target="_blank" class="watch-btn-new">
+                    ▶️ CLICK HERE TO WATCH FULL VIDEO
+                </a>
+                <div class="features-new">
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>Wall Hack + Color Body</li>
+                        <li>ESP + Aimbot</li>
+                        <li>100% Safe for Main Account</li>
+                        <li>No Root Required</li>
+                        <li>Anti-Ban Protection</li>
+                        <li>Bullet Track</li>
+                        <li>Easy Installation</li>
+                    </ul>
+                </div>
             </div>
-</div>
-            <div class="video-container">
-                
-            </div>
+
             <button class="share-btn" onclick="shareContent('Wall Hack Video Proof')">📤 Share Wall Hack Video</button>
             <div class="price-grid">
                 <div class="price-card wall"><span>FIX PRICE (PKR)</span><span class="price-val">Rs.2500 PK</span></div>
@@ -238,9 +213,14 @@
         <section class="section-box">
             <h2 class="section-title">📂 Tiger Loader Android (ESP)</h2>
             <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></div>
-            <div class="video-container">
-                
+            
+            <div class="media-flex-container">
+                <img src="LOADER_THUMBNAIL.jpg" alt="Loader Video" class="thumbnail-new">
+                <a href="ANDROID_YOUTUBE_LINK" target="_blank" class="watch-btn-new">
+                    ▶️ CLICK HERE TO WATCH FULL VIDEO
+                </a>
             </div>
+
             <button class="share-btn" onclick="shareContent('Full Loader Video Proof')">📤 Share Loader Video</button>
             <div class="price-grid" style="margin-bottom: 25px;">
                 <div class="price-card pk"><span>1 Week</span><span class="price-val">Rs.1500</span></div>
@@ -256,32 +236,37 @@
 
         <section class="section-box" style="border: 2px solid #00a8ff;">
             <h2 class="section-title" style="border-left-color: #00a8ff;">🍎 iPhone iPad PUBG Hack</h2>
-            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
-            <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
-            <img src="IPHONE_THUMBNAIL.jpg" alt="iPhone Hack Video" class="thumbnail-new">
-            <a href="IPHONE_YOUTUBE_LINK" target="_blank" class="watch-btn-new">
-                ▶️ CLICK HERE TO WATCH FULL VIDEO
-            </a>
-            <div class="features-new">
-                <h3>Features:</h3>
-                <ul>
-                    <li>No Jailbreak Required</li>
-                    <li>Wall Hack + ESP</li>
-                    <li>Color Body</li>
-                    <li>Bullet Track</li>
-                    <li>Auto Update Support</li>
-                    <li>iOS 15-17 Supported</li>
-                    <li>100% Safe for Main Account</li>
-                </ul>
+            <div class="safe-tag">Main Account 100% Safe <div class="lottie-check" style="width: 20px; height: 20px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div></div>
+            
+            <div class="media-flex-container">
+                <div class="safe-badge-new">Main Account 100% Safe ⚠️</div>
+                <img src="IPHONE_THUMBNAIL.jpg" alt="iPhone Hack Video" class="thumbnail-new">
+                <a href="IPHONE_YOUTUBE_LINK" target="_blank" class="watch-btn-new">
+                    ▶️ CLICK HERE TO WATCH FULL VIDEO
+                </a>
+                <div class="features-new">
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>No Jailbreak Required</li>
+                        <li>Wall Hack + ESP</li>
+                        <li>Color Body</li>
+                        <li>Bullet Track</li>
+                        <li>Auto Update Support</li>
+                        <li>iOS 15-17 Supported</li>
+                        <li>100% Safe for Main Account</li>
+                    </ul>
+                </div>
             </div>
-</div>
-            <div class="video-container">
-                
-            </div>
+
             <button class="share-btn" onclick="shareContent('iPhone Hack Video Proof')">📤 Share iPhone Hack Video</button>
+            
+            <div class="price-grid" style="margin-bottom: 25px;">
+                <div class="price-card iphone"><span>1 WEEK (PKR)</span><span class="price-val">Rs.3300</span></div>
+                <div class="price-card iphone"><span>1 MONTH (PKR)</span><span class="price-val">Rs.6500</span></div>
+            </div>
             <div class="price-grid">
-                <div class="price-card iphone"><span>1 WEEK</span><span class="price-val">Rs.3300</span></div>
-                <div class="price-card iphone"><span>1 MONTH</span><span class="price-val">Rs.6500</span></div>
+                <div class="price-card usd"><span>1 WEEK (USDT)</span><span class="price-val">$15</span></div>
+                <div class="price-card usd"><span>1 MONTH (USDT)</span><span class="price-val">$30</span></div>
             </div>
         </section>
 
@@ -294,10 +279,6 @@
                 <div class="pay-badge">Bank Transfer</div>
             </div>
         </section>
-
-        <a href="https://github.com/LOADERNO1/LOADER/releases/download/Loader/TIGER.LOADER_4.4.0.apk" class="btn-download">
-            DOWNLOAD NEW UPDATE 4.4 <div class="lottie-check" style="width: 35px; height: 35px;"><lottie-player src="Success Check.json" background="transparent" speed="1" loop autoplay></lottie-player></div>
-        </a>
 
         <footer class="footer">
             <a href="https://wa.me/923284891261" class="contact-btn wa-chat">
@@ -314,16 +295,6 @@
             </a>
             <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">© 2026 TIGER LOADER - Official Page</p>
         </footer>
-    </div>
-
-    <div style="display:none;">
-        RESOURCES_TIGER_LOADER_V4.4_SECURE_PAYMENT_VERIFIED_GITHUB_STABILITY_PATCH
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        [... ADDITIONAL STABILITY DATA BLOCK START ...]
-        TIGER_LOADER_OFFICIAL_4.4_FINAL_RELEASE_STABILITY_PATCH_VERIFIED_SECURE_PAYMENTS_ALL_MODULES_ACTIVE
-        [... ADDITIONAL STABILITY DATA BLOCK END ...]
     </div>
 
     <script>
